@@ -1,0 +1,347 @@
+/* ===================================================
+   Reset & Base
+   =================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", sans-serif;
+  background-color: #ededed;
+  color: #333333;
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===================================================
+   Sidebar (좌측 고정 메뉴)
+   =================================================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #2d2d2d;
+  padding: 36px 24px;
+}
+
+.sidebar nav li {
+  margin-bottom: 26px;
+}
+
+.sidebar nav a {
+  color: #c9c9c9;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+.sidebar nav a:hover {
+  color: #ffffff;
+}
+
+.sidebar nav a.active {
+  color: #4a90e2;
+}
+
+/* ===================================================
+   Main Layout (메인 영역 / 이력서 카드)
+   =================================================== */
+main {
+  margin-left: 200px;
+  padding: 45px 30px;
+}
+
+.resume-card {
+  max-width: 880px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  padding: 55px 60px;
+}
+
+/* ===================================================
+   Header (이름 / 연락처 / 프로필 사진)
+   =================================================== */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.header-top h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #6b6b6b;
+}
+
+.contact-item i {
+  font-size: 16px;
+}
+
+.profile-img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.header-divider {
+  border: none;
+  border-top: 1px solid #2b2b2b;
+  margin-top: 26px;
+}
+
+/* ===================================================
+   Section 공통
+   =================================================== */
+section {
+  margin-top: 42px;
+}
+
+.section-title {
+  font-size: 23px;
+  font-weight: 800;
+  color: #1a1a1a;
+  border-left: 5px solid #1f1f1f;
+  padding-left: 14px;
+  margin-bottom: 26px;
+}
+
+/* ===================================================
+   Introduce (자기소개)
+   =================================================== */
+.introduce p {
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+/* ===================================================
+   Skills (보유 기술 - 뱃지)
+   =================================================== */
+.skill-group {
+  margin-bottom: 22px;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.skill-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #9a9a9a;
+  margin-bottom: 11px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-list li {
+  background-color: #eef1f7;
+  color: #41618f;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 17px;
+  border-radius: 20px;
+}
+
+/* ===================================================
+   Experience (경력)
+   =================================================== */
+.exp-company {
+  margin-bottom: 34px;
+}
+
+.exp-company:last-child {
+  margin-bottom: 0;
+}
+
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.exp-head h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.exp-period {
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+.exp-role {
+  font-size: 15px;
+  font-weight: 700;
+  color: #444444;
+  margin: 7px 0 16px;
+}
+
+.role-divider {
+  color: #cccccc;
+  margin: 0 6px;
+  font-weight: 400;
+}
+
+.role-rank {
+  color: #9a9a9a;
+  font-weight: 500;
+}
+
+.exp-project {
+  border-top: 1px solid #ededed;
+  padding: 16px 0 4px 14px;
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.project-head h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+.project-period {
+  font-size: 13px;
+  color: #b0b0b0;
+}
+
+.project-desc {
+  margin-top: 9px;
+  padding-left: 4px;
+}
+
+.project-desc li {
+  position: relative;
+  padding-left: 16px;
+  color: #5a5a5a;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.project-desc li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #b0b0b0;
+}
+
+/* ===================================================
+   Records (Education / Awards / Certifications)
+   =================================================== */
+.record {
+  display: flex;
+  gap: 40px;
+  padding: 11px 4px;
+}
+
+.record-date {
+  flex-shrink: 0;
+  width: 100px;
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+.record-desc {
+  color: #333333;
+  font-size: 16px;
+}
+
+/* ===================================================
+   반응형 디자인 (Responsive)
+   =================================================== */
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 16px 20px;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .sidebar nav li {
+    margin-bottom: 0;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 24px 14px;
+  }
+
+  .resume-card {
+    padding: 32px 24px;
+  }
+
+  .header-top {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .exp-head,
+  .project-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .record {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .record-date {
+    width: auto;
+  }
+}
